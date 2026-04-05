@@ -6,8 +6,10 @@
 Student: Ibrahim Zbib
 UFID: 79090242
 
-### Running from a file:
+### Run the program with an input file:
   ``` python3 src/solution.py data/example.in```
+
+
 
 
 ### Assumptions:
