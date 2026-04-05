@@ -4,13 +4,20 @@
 # Programming Assignment 3 dynamic programming
 
 Student: Ibrahim Zbib
+
 UFID: 79090242
 
 
-
+Repo Structure:
+- README.md
+- /data - input and output folder, graph for question 1
+- /src - main program 
 
 ## How to run:
+no compilation needed, since it is completely python3. To run the file with an input file:
 ```python3  src/solution.py <input_file> ```
+
+
 
 ### Run the program with an input file:
 The /data folder holds the input and output files. /src folder holds the main program.
@@ -21,7 +28,10 @@ no output in the terminal means that the output matches
 
 ### Assumptions:
 - Input matches the spec exactly
-- all characters in the string appear in the alphabet, characters not in the alphabet get value 0. 
+- all characters in the string appear in the alphabet, characters not in the alphabet get value 0
+- The strings contain no empty spaces and are non-empty
+- K is accurate
+- There is no duplicate alphabet entries
 
 # Question 1: empirical comparison
 Ten input files were created with string lengths ranging from 25 to 1000, with |A| = |B| for each case. The alphabet used was 10 characters (a–j) with randomly assigned values. Runtime was measured by calling the solve function directly
@@ -29,7 +39,7 @@ Ten input files were created with string lengths ranging from 25 to 1000, with |
 ![Runtime Graph](data/runtime_graph.png)
 
 
-
+The graph clearly shows quadratic run time (O(n^2)). 
 
 
 
@@ -97,4 +107,4 @@ HVLCS(A, B, v):
 
 The table initialization visits every cell once: O(mn). The fill loop runs exactly m × n iterations, each doing a single character comparison and at most two table lookups, which are all O(1) operations. The traceback starts at cell (m, n) and at each step either moves diagonally (i and j both decrease) or moves in one direction, so it visits at most m + n cells total, which is O(m + n). Character value lookup uses a dictionary so each lookup is O(1).
 
-Overall: O(mn) + O(m + n) = O(mn) time.
+Overall: O(mn) + O(m + n) = O(mn) time. The space complexity is O(mn) for the DP table.
