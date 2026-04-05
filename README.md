@@ -36,6 +36,10 @@ no output in the terminal means that the output matches
 # Question 1: empirical comparison
 Ten input files were created with string lengths ranging from 25 to 1000, with |A| = |B| for each case. The alphabet used was 10 characters (a–j) with randomly assigned values. Runtime was measured by calling the solve function directly
 
+
+
+ ![Runtime Table](data/runtime_table.png)
+
 ![Runtime Graph](data/runtime_graph.png)
 
 
